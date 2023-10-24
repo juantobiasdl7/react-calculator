@@ -1,0 +1,54 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to right, #92cace, #356169);
+}
+
+.container-grid {
+    display: grid;
+    margin-top: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.container-grid > button {
+    cursor: pointer;
+    border: 1px solid grey;
+    outline: none;
+    background-color: #f2f9f9;
+}
+
+.container-grid > button:hover,
+.container-grid > button:focus {
+    background-color: #ddeff0;
+}
+
+.two-colums-button {
+    grid-column: span 2;
+}
+
+.result-box {
+    grid-column: 1 / -1;
+    background-color: #2d464c;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.result-box .previous-input {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.result-box .current-result {
+    color: white;
+    font-size: 2.5rem;
+}
